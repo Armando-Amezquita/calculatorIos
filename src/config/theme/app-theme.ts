@@ -34,5 +34,29 @@ export const globalStyles = StyleSheet.create({
         fontSize: 40,
         textAlign: 'right',
         fontWeight: '300'
+    },
+
+    row: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        marginBottom: 18,
+        paddingHorizontal: 10
+    },
+
+    button: {
+        justifyContent: 'center', // con esto los hijos quedan centrados
+        marginHorizontal: 10,
+        height: 70,
+        width: 70,
+        backgroundColor: colors.darkGray,
+        borderRadius: 100
+    },
+
+    buttonText: {
+        textAlign: 'center',
+        padding: 10,
+        fontSize: 30,
+        color: 'white',
+        fontWeight: '300'
     }
 })
