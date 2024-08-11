@@ -1,0 +1,7 @@
+cd android
+./gradlew clean
+cd ..
+rm -rf node_modules android/.gradle android/build
+npm install
+cd android
+./gradlew assembleDebug --stacktrace
