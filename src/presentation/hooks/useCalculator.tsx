@@ -105,6 +105,31 @@ export const useCalculator = () => {
         lastOperation.current = Operator.add
     }
 
+    const calculatorResult = () => {
+        const num1 = Number( number ); 
+        const num2 = Number( prevNumber );
+
+        switch (lastOperation.current) {
+            case Operator.add:
+                setNumber(`${num1 + num2}`);
+                break;
+            case Operator.subtract:
+                setNumber(`${num2 - num1}`);
+                break;
+            case Operator.multiply:
+                setNumber(`${num1 * num2}`);
+                break;
+            case Operator.divide:
+                setNumber(`${num2 / num1}`);
+                break;
+        
+            default:
+                break;
+        }
+
+        setPrevNumber('0')
+    }
+
     return {
         //properties
         number,
@@ -118,7 +143,8 @@ export const useCalculator = () => {
         divideOperation,
         multiplyOperation,
         subtractOperation,
-        addOperation
+        addOperation,
+        calculatorResult
   
     }
 }
